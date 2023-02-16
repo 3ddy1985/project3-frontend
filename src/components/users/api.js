@@ -29,18 +29,6 @@ export const compareUsername = (userDetails) => {
 export const findPosts = () => {
     return axios.get(`${apiUrl}/posts`)}
 
-// api to add a post
-export const addPost = (user, content) => { 
-    return axios.post(`${apiUrl}/posts/create/${user.id}`, { content: content, createdBy: user.userName })}
-
-// api to find a specific post by ID
-export const findPost = (postId) => {
-  return axios.get(`${apiUrl}/posts/${postId}`)}
-
-// api to find this users posts
-export const findMyPosts = (userId) => {
-  return axios.get(`${apiUrl}/users/posts/${userId}`)}
-
 // api to edit post
 export const editPost = (postId, updatedContent) => {
     return axios.patch(`${apiUrl}/posts/edit/${postId}`, { content: updatedContent})}
@@ -50,19 +38,7 @@ export const editUserDetails = (userId, updatedUserDetails) => {
 
 // api to get all searched users
 export const getSearchedUsers = (name) => {
-    return axios.get(`${apiUrl}/search/${name}`)
-}
-
-// api call to update current users friends
-export const addFriends = (id, user) => {
-    console.log('api call', id, user)
-    return axios.post(`${apiUrl}/users/${id}/friends`, user)
-}
-
-// api call to remove current users friends
-export const removeFriends = (id, user) => {
-    return axios.delete(`${apiUrl}/users/${id}/friends`, user)
-}
+    return axios.get(`${apiUrl}/search`, name)}
 
 
 export const addLike = (postId) => {

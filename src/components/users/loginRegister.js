@@ -5,8 +5,6 @@ import { userSeedData } from '../../seedData'
 import { registerAllUsers } from './api'
 import { loginUser } from './api'
 import './../../loginRegister.css'
-import ProfileImg from '../imageUpload/imageEditor'
-import ImageUploader from '../imageUpload/imageEditor'
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -134,7 +132,7 @@ export default class Login extends React.Component {
         <header className='hero-image'>
           <h1 className="hero-h1">Naptser Social</h1>
           <button onClick={this.addDummyUsers} className="tmp-add-users">add seed users</button>
-          <ImageUploader />
+
         </header>
         <div className='login-wrapper'>
           {/* If state isLoginForm = true then login form is displayed */}

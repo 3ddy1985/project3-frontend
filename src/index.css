@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700;900&display=swap');
-
-body, html, #app {
+body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  text-align: center;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
-/* html, body, #app, #app {
-  max-height: 100vw;
-} */
+html, body, #app, #app>div {
+  height: 100%
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
