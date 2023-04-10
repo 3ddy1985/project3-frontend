@@ -66,8 +66,8 @@ During the build/code process, I worked with a team to develop the server-side a
 
 Here are some code snippets highlighting my contributions:
 
-Registration:
-In this code snippet, I implemented the registration route that receives the user's details and stores them in the database. First, I checked if the user's provided data is valid, including a username, password, first name, and last name. Then, I used the bcrypt library to hash the user's password and stored the hashed password in the database using Mongoose. Finally, I generated a JSON Web Token (JWT) with the user's id as the payload, which would be used for user authentication and authorization.
+Registration:  
+In this code snippet, I implemented the registration route that receives the user's details and stores them in the database. First, I checked if the user's provided data is valid, including a username, password, first name, and last name. Then, I used the bcrypt library to hash the user's password and stored the hashed password in the database using Mongoose. Finally, I generated a JSON Web Token (JWT) with the user's id as the payload, which would be used for user authentication and authorization.  
 
 ```js
 app.post('/api/register', (req, res) => {
@@ -121,8 +121,8 @@ app.post('/api/register', (req, res) => {
       });
 ```
 
-Login:
-In this code snippet, I implemented the login route that verifies the user's credentials and returns a JWT if the credentials are valid. First, I checked if the user's provided data is valid, including a username and password. Then, I used Mongoose to retrieve the user's details from the database based on the provided username. If the user was found, I used the bcrypt library to compare the provided password with the stored hashed password. If the passwords match, I generated a JWT with the user's id as the payload, which would be used for user authentication and authorization.
+Login:  
+In this code snippet, I implemented the login route that verifies the user's credentials and returns a JWT if the credentials are valid. First, I checked if the user's provided data is valid, including a username and password. Then, I used Mongoose to retrieve the user's details from the database based on the provided username. If the user was found, I used the bcrypt library to compare the provided password with the stored hashed password. If the passwords match, I generated a JWT with the user's id as the payload, which would be used for user authentication and authorization.  
 ```js
 app.post('/api/login', (req, res) => {
   // Checks if userName and password have values
@@ -164,8 +164,8 @@ app.post('/api/login', (req, res) => {
 ```
 
 
-Register and Login Frontend:
-In these code snippets, I implemented the front-end functionality for user registration and login. When a user enters their details and submits the registration form, the handleRegisterSubmit function is called. This function creates a user object from the form data and sends a POST request to the server to create the user in the database. If the registration is successful, the handleLoginSubmit function is called, which logs the user in by sending a POST request to the server with the user's credentials. If the credentials are valid, the server responds with a JWT that is stored in the app's state and used for subsequent requests.
+Register and Login Frontend:  
+In these code snippets, I implemented the front-end functionality for user registration and login. When a user enters their details and submits the registration form, the handleRegisterSubmit function is called. This function creates a user object from the form data and sends a POST request to the server to create the user in the database. If the registration is successful, the handleLoginSubmit function is called, which logs the user in by sending a POST request to the server with the user's credentials. If the credentials are valid, the server responds with a JWT that is stored in the app's state and used for subsequent requests.  
 ```js
 / register method
   handleRegisterSubmit = (e) => {
@@ -236,7 +236,7 @@ In these code snippets, I implemented the front-end functionality for user regis
       this.setState({ loginErrorMessage: error.response.data.message})
     });
   };
- ```
+ ```  
  
 Overall, my contributions focused on implementing the back-end functionality for user authentication and authorization using Express, MongoDB, bcrypt, and JWT. On the front-end, I implemented the logic for user registration and login using React and Axios.
  
